@@ -1,0 +1,50 @@
+{
+  "name": "@mhdd_24/pgadmin-mcp",
+  "version": "1.0.1",
+  "description": "MCP server for PostgreSQL / pgAdmin-style queries: list schemas/tables, describe columns, and run SQL (read-only by default)",
+  "type": "module",
+  "main": "./dist/index.js",
+  "bin": {
+    "pgadmin-mcp": "./dist/index.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "docs/WIKI.md"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "dev": "tsx src/index.ts",
+    "build": "tsc",
+    "prepack": "npm run build",
+    "start": "node dist/index.js"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "postgresql",
+    "pgadmin",
+    "sql",
+    "cursor"
+  ],
+  "author": "Mhdd-24",
+  "license": "ISC",
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.29.0",
+    "dotenv": "^17.4.2",
+    "pg": "^8.16.3",
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "@types/node": "^26.1.0",
+    "@types/pg": "^8.15.5",
+    "tsx": "^4.22.4",
+    "typescript": "^5.7.0",
+    "xlsx": "^0.18.5"
+  }
+}
